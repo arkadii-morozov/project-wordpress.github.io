@@ -363,6 +363,10 @@ p{
   margin:0px;
   padding: 0px;
 }
+ul{
+  margin:0px;
+  padding: 0px;
+}
 .header-wrapper{
   height: 100vh;
   width: 100%;
@@ -375,6 +379,8 @@ p{
   position: absolute;
   top: 0px;
   left: 0px;
+  height: 100vh;
+  width: 100%;
 }
 .slider-wrapper .slide-item .slider-text {
   font-size: 60px;
@@ -396,6 +402,7 @@ p{
   border: 0px;
   cursor: pointer;
 }
+
 .slider-wrapper  .slick-arrow.slick-prev{
   left: 0px;
   background: url(./assets/img/arrow-left.png) center center no-repeat;
@@ -494,9 +501,13 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0px;
 }
 .drop-nav-menu{
   display: none;
+  -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 }
 .nav-menu li > a, .drop-nav-menu li > a{
   display: block;
@@ -581,10 +592,11 @@ header {
   border-radius: 2px;
   line-height: 52px;
 }
-.proposal{
+.proposal {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
+  justify-content: center;
 }
 .proposal-title {
   width: 630px;
@@ -608,7 +620,7 @@ header {
   flex-flow: row wrap;
   justify-content: flex-start;
   width: 100%;
-  margin-bottom: 115px;
+  margin-bottom: 85px;
 }
 .advantages .adv-item {
   display: flex;
@@ -647,13 +659,14 @@ header {
   background: #e4fdf9;
   width: 100%;
 }
-.services-wrapper, .partners-wrapper{
+.services-wrapper, .partners-wrapper {
   display: flex;
   flex-flow: column;
+  align-items: center;
 }
 .services-title {
-  margin: 115px auto 100px;
-  width: 630px;
+  margin: 115px auto;
+  width: 100%;
 }
 .services-title > h2, .partners-title > h2, .contact-title > h2{
   font-size: 30px;
@@ -674,7 +687,7 @@ header {
   flex-flow: row wrap;
   justify-content: center;
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 85px;
 }
 .services-item{
   display: flex;
@@ -771,6 +784,10 @@ header {
   width: 630px;
   margin: 0px auto;
 }
+.about-us-title{
+  margin: 115px auto 35px;
+  width: 100%;
+}
 .about-us-text{
   margin: 0px auto 50px;
 }
@@ -779,7 +796,8 @@ header {
   font-weight: bold;
   text-align: center;
   line-height: 22px;
-  margin: 115px auto 35px;
+  margin: 0px;
+  padding: 0px;
 }
 .about-us-text > p, .contact-title > p{
   font-size: 15px;
@@ -799,7 +817,7 @@ header {
   width: 100%;
 }
 .partners-title {
-  margin: 115px auto 115px;
+  margin: 115px auto;
   width: 630px;
 }
 .partners-items{
@@ -810,14 +828,17 @@ header {
   flex-flow: column;
   margin: 15px;
   width: calc((100%/12) * 4 - 30px);
+  background: white;
 }
 .partner-item > p {
-  margin-top: 10px;
+  margin: 10px auto 15px;
+  font-size: 18px;
 }
 .partner-item-img span {
   display: block;
   max-width: 370px;
   height: 370px;
+  margin: 10px auto;    
 }
 .partner-item:nth-child(1)  .partner-item-img span{
   background: url(./assets/img/partner-sert1.jpg) 
@@ -870,14 +891,14 @@ header {
   flex-flow: row wrap;
 }
 .contact-title {
-  margin: 115px auto 115px;
+  margin: 115px auto 100px;
   width: 640px;
 }
 .contact-info .contact-title > h2 {
   margin: 0px auto 30px;
 }
 .contact-items{
-  margin-bottom: 80px;
+  margin-bottom: 70px;
 }
 .contact-item {
   display: flex;
@@ -929,6 +950,7 @@ header {
   box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   margin-right: -15px;
   margin-left: -15px;
 }
@@ -950,13 +972,13 @@ header {
   font-weight: 600;
   border-radius: 10px;
   border: 0px solid transparent;
-  padding: 30px 20px;
+  padding: 20px;
   outline:none;
 }
 .btn {
   box-sizing: border-box;
-  width: 230px;
-  height: 70px;
+  width: 200px;
+  height: 55px;
   text-align: center;
   padding: 0px;
   margin: 0px 15px 0px auto;
@@ -1009,4 +1031,274 @@ footer{
   max-height: 42px;
   margin-left: 5px;
   margin-top: -8px;
+}
+/*==================Adaptiv=============*/
+/*992px-1200px*/
+@media screen and (max-width: 1200px){
+  .container{
+    width: 940px;
+  }
+  .contact-form-wrapper{
+    width: 890px;
+  }
+}
+/*=====768px-992px=======*/
+@media screen and (max-width: 992px){
+  .container{
+    width: 716px;
+  }
+  .row .col-item p {
+    font-size: 15px;
+  }
+  .logo {
+    font-size: 23px;    
+  }
+  .nav-menu li > a, .drop-nav-menu li > a {
+    font-size: 18px;
+  }
+  .title-home-page h1 {
+    font-size: 50px;
+  }
+  .title-home-page p {
+    font-size: 20px;
+  }
+  .button-services, .button-some{
+    font-size: 15px;
+  }
+  .serv-item-button, .about-us-button, 
+  .partners-button, .btn-form{
+    font-size: 18px;
+  }
+  .navigation {
+    width: 490px;
+  }
+  .contact-form-wrapper{
+    width: 668px;
+  }
+  .advantages, .contact-items {
+    justify-content: center;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .advantages .adv-item {    
+    flex-grow: 0; 
+    margin: 0px 15px 30px 15px;
+    width: calc(100%/12 * 6 - 30px);
+  }
+  .services-items, .partners-items{
+    justify-content: flex-start;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .services-item, .partner-item{    
+    margin: 0px 15px 30px 15px;
+    width: calc(100%/12 * 6 - 30px);
+  }
+  .contact-item{
+    margin: 0px 15px;
+    width: calc(100%/12 * 4 - 30px);
+  }
+  .contact-item > p{
+    font-size: 17px;
+  }
+  .contact-item .contact-item-img span {
+    max-width: 80px;
+    height: 80px;
+  }
+  .form-fields {
+    padding-bottom: 70px;
+  }
+  .footer-title {
+    font-size: 18px;
+  }
+}
+/*=====576px-768px========*/
+@media screen and (max-width: 768px){
+  .container{
+    width: 524px;
+  }
+  .header-top-area {
+    height: 84px;
+  }
+  .row .col-item:nth-child(3) {
+    margin: 0px 15px;
+  }
+  .nav-wrapper {
+    height: 60px;
+  }
+  .nav-menu, .drop-nav-menu {
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    top: 144px;
+    left: 0px;
+    width: 100%;
+    background: #fff;
+    margin: 0px;
+    padding: 0px;
+    border-top: 1px dashed #999;
+  }
+  .nav-menu li, .drop-nav-menu li{
+    display: block;
+    height: 20px;
+    width: fill-available;
+    margin: 11px 50px;
+  }
+  .nav-menu a, .drop-nav-menu a{
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .nav-menu li > a:hover, .drop-nav-menu li > a:hover{
+    text-decoration: underline;
+  }
+  .menu-btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  /* добавляем "гамбургер" */
+  .menu-btn > span,
+  .menu-btn > span::before,
+  .menu-btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+  }
+  .menu-btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu-btn > span::after {
+    content: '';
+    top: 8px;
+  }
+/*  .row .col-item p {
+    font-size: 15px;
+  }
+  .logo {
+    font-size: 23px;    
+  }
+  .nav-menu li > a, .drop-nav-menu li > a {
+    font-size: 18px;
+  }
+  .title-home-page h1 {
+    font-size: 50px;
+  }
+  .title-home-page p {
+    font-size: 20px;
+  }
+  .button-services, .button-some{
+    font-size: 15px;
+  }
+  .serv-item-button, .about-us-button, 
+  .partners-button, .btn-form{
+    font-size: 18px;
+  }*/
+  .navigation {
+    width: 490px;
+    display: flex;
+    flex-flow: row-reverse;
+  }
+  .home-page {
+    width: 500px;
+  }
+  .proposal-title {
+    width: 100%;
+    margin: 80px auto;
+  }
+  .advantages {    
+    margin-bottom: 35px;
+  }
+  .advantages .adv-item {
+    margin: 0px 15px 45px 15px;
+    width: calc(100%/12 * 12 - 30px);
+  }
+  .services-title {
+    margin: 80px auto;
+    width: 100%;
+  }
+  .services-items, .partners-items {
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+  .services-item, .partner-item {
+    background: white;
+    margin: 0px 45px 45px 45px;
+    width: calc(100%/12 * 12 - 90px);
+  }
+  .about-us-wrapper {
+    width: 100%;
+  }
+  .about-us-title {
+    margin: 80px auto;
+    width: 100%;
+  }
+  .about-us-button {
+    margin: 0px auto 80px;
+  }
+  .partners-title {
+    margin: 80px auto;
+    width: 100%;
+  }
+  .partner-item-img span {
+    margin: 10px auto;
+  }
+  .partner-item > p {
+    margin: 0px auto 20px;
+    font-size: 18px;
+  }
+  .partners-wrapper .partners-button {    
+    margin: 0px auto 80px;
+  }
+  /*section contact*/
+  .contact-form-wrapper {
+    width: 524px;
+  }
+  .contact-title {
+    margin: 80px auto;
+    width: 100%;
+  }
+  .contact-item{
+    flex-flow: row;
+    margin: 0px 45px 20px;
+    width: calc(100%/12 * 12 - 90px);
+  }
+  .contact-item-img{
+    margin: 0px;
+  }
+  .contact-item .contact-item-img span {
+    max-width: 60px; 
+    width: 60px;
+    height: 60px;
+  }
+  .contact-item > p {
+    margin: 0px;
+    flex-grow: 1;
+    text-align: end;
+  }
+  .contact-items {
+    margin-bottom: 40px;
+  }
+  .col-6, .col-12 {
+    width: calc(100%/12 * 12 - 30px);
+  }
+  .col-6 input, .col-12 textarea, .btn {
+    padding: 15px;
+  }
+  .footer-wrapper {
+    height: 60px;
+  }
+}
+/*==================-576px========================*/
+@media screen and (max-width: 576px){
+
 }

@@ -1,6 +1,49 @@
 $(window).on( "load", init);
 
 function init(){
+
+    var height = $(".welcome").css("top");  // for paralax
+    var count = false; // menu switch
+    $('.menu-btn').on('click', function(){
+        count = !count;
+        if(count){
+            $('.drop-nav-menu').slideDown(100);   
+        } else{
+            $('.drop-nav-menu').slideUp(100);
+        }
+    });
+    // hide menu
+    $(document).on('click', function(e){
+        let target = e.target;
+        let parentEl = target.parentElement.className;
+        let gamburger = false;
+        let dropNav = false;
+        if (parentEl && parentEl=="menu-btn"){
+            gamburger = true; // hide drop-menu
+        }
+        if (parentEl && parentEl=="drop-nav-menu") {
+            dropNav = true;
+        }
+            
+        if (target.className != "menu-btn" &&
+            gamburger == false &&
+            target.className != "drop-nav-menu" &&
+            dropNav == false &&
+            count ){
+            count = !count;
+            $('.drop-nav-menu').slideUp(100);
+        }
+    });
+    // resize window
+    $(window).resize(function() {
+        var widthDisp = $(window).width()+16;
+        height = $(".welcome").css("top")
+        if ( widthDisp >= 768 ){
+             $('.drop-nav-menu').slideUp(20);
+             count = false;
+        }
+    });
+    // button scrollup
 	$(window).scroll(function(){
         if ($(this).scrollTop() > 150) {
             $('.scrollup').fadeIn();
