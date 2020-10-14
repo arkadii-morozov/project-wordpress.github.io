@@ -405,12 +405,20 @@ ul{
 
 .slider-wrapper  .slick-arrow.slick-prev{
   left: 0px;
-  background: url(./assets/img/arrow-left.png) center center no-repeat;
+  background: url(./assets/img/arrow-left.png) center center no-repeat, rgba(204, 204, 204, 0.4);
   background-size: contain;
 }
 .slider-wrapper  .slick-arrow.slick-next{
   right:0px;
-  background: url(./assets/img/arrow-right.png) center center no-repeat;
+  background: url(./assets/img/arrow-right.png) center center no-repeat, rgba(204, 204, 204, 0.4);
+  background-size: contain;
+}
+.slider-wrapper  .slick-arrow.slick-prev:hover{
+  background: url(./assets/img/arrow-left.png) center center no-repeat, rgba(0, 137, 123, 1);
+  background-size: contain;
+}
+.slider-wrapper  .slick-arrow.slick-next:hover{
+  background: url(./assets/img/arrow-right.png) center center no-repeat, rgba(0, 137, 123, 1);
   background-size: contain;
 }
 /* лента слайдов */
@@ -554,6 +562,7 @@ header {
   display: flex;
   flex-flow: row wrap;
   width: 485px;
+  /*width: 100%;*/
   margin: 0px auto 25px;
   align-items: center;
   align-content: space-between;
@@ -1181,28 +1190,6 @@ footer{
     content: '';
     top: 8px;
   }
-/*  .row .col-item p {
-    font-size: 15px;
-  }
-  .logo {
-    font-size: 23px;    
-  }
-  .nav-menu li > a, .drop-nav-menu li > a {
-    font-size: 18px;
-  }
-  .title-home-page h1 {
-    font-size: 50px;
-  }
-  .title-home-page p {
-    font-size: 20px;
-  }
-  .button-services, .button-some{
-    font-size: 15px;
-  }
-  .serv-item-button, .about-us-button, 
-  .partners-button, .btn-form{
-    font-size: 18px;
-  }*/
   .navigation {
     width: 490px;
     display: flex;
@@ -1300,5 +1287,69 @@ footer{
 }
 /*==================-576px========================*/
 @media screen and (max-width: 576px){
-
+  .container {
+    width: 350px;
+  }
+  .header-top-area {
+    height: 56px;
+  }
+  .nav-menu, .drop-nav-menu {
+    top: 116px;
+  }
+  .header-top-area .col-item span {
+    width: 15px;
+    height: 15px;
+    margin: auto 0px;
+  }
+  .row .col-item p {
+    font-size: 14px;
+    padding: 3px;
+  }
+  .home-page {
+    width: 350px;
+  }
+  .title-home-page h1 {
+    font-size: 40px;
+  }
+  .title-home-page p {
+    font-size: 18px;
+  }
+  .buttons-home-page .button-services, .buttons-home-page .button-some {
+    width: 220px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0px auto 20px;
+  }
+  .buttons-home-page .button-services:hover,
+  .buttons-home-page .button-some:hover{
+    line-height: 62px;
+  }
+  .button-arrow {
+    width: 140px;
+    margin: 0px auto;
+  }
+  .services-item, .partner-item {
+    margin: 0px 20px 45px 20px;
+    width: calc(100% - 40px);
+  }
+  .about-us-text > p, .contact-title > p {
+    font-size: 15px;
+    text-align: left;
+    margin: 0px 10px;
+  }
+  .contact-form-wrapper {
+    width: 350px;
+  }
+  .contact-item {
+    margin: 0px 10px 20px;
+    width: calc(100%/12 * 12 - 20px);
+  }
+  .contact-item-img {
+    margin: 0px 20px 0px 40px;
+  }
+  .contact-item > p {
+    margin: 0px;
+    flex-grow: 0;
+    text-align: left;
+  }
 }

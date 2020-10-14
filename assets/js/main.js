@@ -37,7 +37,6 @@ function init(){
     // resize window
     $(window).resize(function() {
         var widthDisp = $(window).width()+16;
-        height = $(".welcome").css("top")
         if ( widthDisp >= 768 ){
              $('.drop-nav-menu').slideUp(20);
              count = false;
